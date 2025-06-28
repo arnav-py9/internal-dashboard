@@ -6,9 +6,12 @@ function Navbar() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    localStorage.removeItem('auth');
-    navigate('/login');
-  };
+  localStorage.removeItem('userEmail');
+  localStorage.removeItem('userPassword');
+  localStorage.removeItem('loggedIn');
+  navigate('/login');
+};
+
 
   const goToProfile = () => {
     console.log('Navigating to profile...');

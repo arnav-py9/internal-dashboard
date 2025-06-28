@@ -1,6 +1,11 @@
-// src/pages/Profile.tsx
-const Profile = () => {
-  return <h2>This is Profile</h2>;
-};
+function Profile() {
+  const email = localStorage.getItem('userEmail');
+  return (
+    <div>
+      <h2>Profile Page</h2>
+      <p>Email: {email}</p>
+    </div>
+  );
+}
 
 export default Profile;

@@ -13,8 +13,10 @@ const Login = () => {
     const storedPassword = localStorage.getItem('userPassword');
 
     if (email === storedEmail && password === storedPassword) {
-      localStorage.setItem('loggedIn', 'true');
-      navigate('/home');
+  localStorage.setItem('loggedIn', 'true'); // Optional
+  navigate('/');
+
+
     } else {
       alert('Invalid email or password');
     }
